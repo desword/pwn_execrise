@@ -1,7 +1,7 @@
 from pwn import *
 from LibcSearcher import *
 
-# context.binary = "./pwn9"
+context.binary = "./pwn9"
 
 def DEBUG(cmd):
     gdb.attach(io, cmd)
